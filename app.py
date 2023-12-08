@@ -3,28 +3,28 @@ import os
 
 app = Flask(__name__)
 
+@app.route("/")
 @app.route("/home")
 def home():
-    pass
-
+    return render_template("home/home.html",title = "menath.dev")
 
 @app.route("/aboutme")
 def aboutMe():
-    pass
+    return render_template("about_me/about_me.html",title = "About Me")
 
 
 @app.route("/contactMe")
 def contactMe():
-    pass
+    return render_template("contact_me/contact_me.html",title = "Contact me")
 
 
-@app.route("projects")
+@app.route("/projects")
 def projects():
-    pass
+    return render_template("projects/projects.html",title = "Projects")
 
-@app.route("menaBlogs")
+@app.route("/menaBlogs")
 def myBlogs():
-    pass
+    return render_template("blogs/my_blogs.html",title = "Menaa Blogs")
 
 
 if __name__ == "__main__":
